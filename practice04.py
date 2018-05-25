@@ -10,4 +10,11 @@ s = """
 </html>
 """
 
-print()
+import re
+
+def remove_tag(content):
+   cleanr =re.compile('<.*?>')
+   cleantext = re.sub(cleanr, '', content)
+   return cleantext
+
+print(remove_tag(s))

@@ -3,6 +3,7 @@ in this guide, then the Python Mentors group is available to help guide new cont
 
 S = s.upper()
 arr = S.replace(',', ' ').replace('.',' ').replace('\n', ' ').split()
-arr.sort(key=str)
+arr = list(set(arr))
+print(arr)
 for i in arr:
-    print(i+' : ')
+    print('{0}:{1}'.format(i, arr.count(i)))
